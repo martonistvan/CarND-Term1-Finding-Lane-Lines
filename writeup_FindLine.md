@@ -15,7 +15,7 @@ My pipeline consist of the following steps:
 
 
 In order to draw a single line on the left and right lanes, I created a new function, called draw_solidlines, that does the following:
-    sdsdsd
+
     - separating line segments into 2 groups (left and right side)
         - to determine to which group each line segment belongs I use (y2-y1)/(x2-x1). if the value is negative then it is the left line, if positive then right line
     - I ended up with 2 matrixes that contain the coordintes (x,y) of the line segments. I do not consider them as end-points of the lines anymore, only as dots.
