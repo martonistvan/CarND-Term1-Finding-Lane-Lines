@@ -32,7 +32,7 @@ My pipeline consist of the following steps:
     - another function is called to draw the lines on a blank image (line image). the coordinates of the lines are the output of Hough transformation.
     - by combining the color image with the line image we get the final result
     
-
+[image1]: ./result.jpg
 
 
 In order to draw a single line on the left and right lanes, I created a new function, called draw_solidlines, that does the following:
