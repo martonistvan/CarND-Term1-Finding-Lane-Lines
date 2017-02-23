@@ -1,24 +1,3 @@
-#**Finding Lane Lines on the Road** 
-
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
----
-
-**Finding Lane Lines on the Road**
-
-The goals / steps of this project are the following:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
-
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
----
-
 ### Reflection
 
 ###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
@@ -32,21 +11,18 @@ My pipeline consist of the following steps:
     - another function is called to draw the lines on a blank image (line image). the coordinates of the lines are the output of Hough transformation.
     - by combining the color image with the line image we get the final result
     
-[image1]: ./result.jpg
+[image1]: result.jpg
 
 
 In order to draw a single line on the left and right lanes, I created a new function, called draw_solidlines, that does the following:
+    sdsdsd
     - separating line segments into 2 groups (left and right side)
         - to determine to which group each line segment belongs I use (y2-y1)/(x2-x1). if the value is negative then it is the left line, if positive then right line
     - I ended up with 2 matrixes that contain the coordintes (x,y) of the line segments. I do not consider them as end-points of the lines anymore, only as dots.
     - then I use the linear least square method to determine a single line that best fits to the left and right line segments
     - based on the result of the least square method I know the coefficient of y = mx + c, then I use (m,c) to draw a line on the left any right side.
     
-    
-
-
-
-
+  
 ###2. Identify potential shortcomings with your current pipeline
 
 
